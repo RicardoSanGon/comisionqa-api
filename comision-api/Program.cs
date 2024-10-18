@@ -2,11 +2,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
 using ComisionQA;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 builder.Services.AddNpgsql<ComisionQaContext>(connectionString: "Host=localhost;Port=5432;Database=comisionqa;Username=postgres;Password=root;");
 builder.Services.AddControllersWithViews();
 

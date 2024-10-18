@@ -1,4 +1,5 @@
 ﻿using ComisionQA;
+using ComisionQA.Migrations;
 using ComisionQA.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,9 +17,20 @@ namespace comision_api.Controllers
             this._context = context;
         }
 
-        async public Task<List<Rol>> findAll()
+        public async Task<IActionResult> findAll()
         {
-            return await _context.Rols.ToListAsync<Rol>();
+            var rols = await _context.Rols.Include(r=>r.Users).ToListAsync();
+            return Ok(rols);
+        }
+        [HttpGet("{id}")]
+        async public Task<ActionResult> findById(int id)
+        {
+            var rol = await _context.Rols.Include(r => r.Users).ThenInclude(u => u.profile).FirstOrDefaultAsync(r => r.Id == id);
+            if (rol == null)
+            {
+                return NotFound();
+            }
+            return Ok(rol);
         }
     }
 }

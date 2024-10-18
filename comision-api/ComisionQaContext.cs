@@ -9,6 +9,7 @@ namespace ComisionQA
         public ComisionQaContext(DbContextOptions<ComisionQaContext> options)
             : base(options)
         {
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

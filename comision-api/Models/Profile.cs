@@ -1,11 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ComisionQA.Models
 {
+    [Table("profiles")]
     public class Profile
     {
         public int Id { get; set; }
-        public string firtsName { get; set; }
+        public string firstname { get; set; }
         public string maternal { get; set; }
         public string paternal { get; set; }
         public string username { get; set; }

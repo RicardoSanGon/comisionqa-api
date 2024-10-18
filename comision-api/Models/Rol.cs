@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ComisionQA.Models
 {
@@ -12,8 +13,8 @@ namespace ComisionQA.Models
         public DateTime? createdAt { get; set; }
         public DateTime? updatedAt { get; set; }
         public DateTime? deletedAt { get; set; }
-        public List<User> users { get; set; }
-
+        [JsonIgnore]
+        public ICollection<User> Users { get; set; }
         public void updatePropeties(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Rol>()
