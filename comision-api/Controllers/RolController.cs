@@ -19,7 +19,7 @@ namespace comision_api.Controllers
 
         public async Task<IActionResult> findAll()
         {
-            var rols = await _context.Rols.Include(r=>r.Users).ToListAsync();
+            var rols = await _context.Rols.Include(r=>r.Users).ThenInclude(u=>u.profile).ToListAsync();
             return Ok(rols);
         }
         [HttpGet("{id}")]

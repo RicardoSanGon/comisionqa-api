@@ -1,17 +1,21 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ComisionQA.Models
 {
+    [Table("catalogues")]
     public class Catalogue
     {
         public int Id { get; set; }
+        [Required]
+        [StringLength(30,MinimumLength = 3)]
         public string name { get; set; }
-        public bool status { get; set; }
+        public bool? status { get; set; } = true;
         public DateTime createdAt { get; set; }
         public DateTime? updatedAt { get; set; }
         public DateTime? deletedAt { get; set; }
-
-        public List<Brand> Brands { get; set; }
+        public ICollection<Brand>? Brands { get; set; }
 
         public void updatePropeties(ModelBuilder modelBuilder)
         {

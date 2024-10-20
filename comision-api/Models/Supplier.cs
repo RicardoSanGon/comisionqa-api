@@ -1,14 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ComisionQA.Models
 {
+    [Table("suppliers")]
     public class Supplier
     {
         public int Id { get; set; }
         public string supplierName { get; set; }
         public string supplierEmail{ get; set; }
         public string supplierPhone { get; set; }
-        public bool status { get; set; }
+        public bool? status { get; set; }
         public DateTime createdAt { get; set; }
         public DateTime? updatedAt { get; set; }
         public DateTime? deletedAt { get; set; }

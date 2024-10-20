@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using comision_api.Seeders;
+using Microsoft.EntityFrameworkCore;
 
 namespace ComisionQA.Seeders
 {
@@ -11,9 +12,8 @@ namespace ComisionQA.Seeders
         }
         async public Task<bool> Seed()
         {
-            bool resRoles = await new RolSeeder(_context).fillData();
-            bool resUsers = await new UserSeeder(_context).fillData();
-            return resRoles && resUsers;
+            return await new RolSeeder(_context).fillData() && await new UserSeeder(_context).fillData() 
+                && await new ProfileSeeder(_context).fillData() && await new CatalogueSeeder(_context).fillData();
         }
     }
 }

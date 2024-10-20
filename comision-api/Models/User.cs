@@ -12,7 +12,7 @@ namespace ComisionQA.Models
         [JsonIgnore]
         public string password { get; set; }
         public string? code { get; set; }
-        public bool status { get; set; }
+        public bool? status { get; set; }
         public int rolId { get; set; }
         public Rol Rol { get; set; }
         public DateTime createdAt { get; set; }

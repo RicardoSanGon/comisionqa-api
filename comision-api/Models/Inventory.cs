@@ -1,5 +1,8 @@
-﻿namespace ComisionQA.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ComisionQA.Models
 {
+    [Table("inventories")]
     public class Inventory
     {
         public int Id { get; set; }

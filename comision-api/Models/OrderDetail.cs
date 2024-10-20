@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ComisionQA.Models
 {
+    [Table("order_details")]
     public class OrderDetail
     {
         public int Id { get; set; }

@@ -1,12 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ComisionQA.Models
 {
+    [Table("brands")]
     public class Brand
     {
         public int Id { get; set; }
         public string name { get; set; }
-        public bool status { get; set; }
+        public bool? status { get; set; }
         public int catalogueId { get; set; }
         public Catalogue Catalogue { get; set; }
         public DateTime createdAt { get; set; }

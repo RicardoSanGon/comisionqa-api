@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("comision-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebedc60a82476c42f901a3ac73d370751b942142")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc35a36b98df9a1359deb74c842c4d6e5821de87")]
 [assembly: System.Reflection.AssemblyProductAttribute("comision-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("comision-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

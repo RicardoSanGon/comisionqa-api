@@ -1,5 +1,8 @@
-﻿namespace ComisionQA.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ComisionQA.Models
 {
+    [Table("sale_histories")]
     public class SaleHistory
     {
         public int Id { get; set; }

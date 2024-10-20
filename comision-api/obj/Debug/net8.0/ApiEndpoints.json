@@ -1,5 +1,78 @@
 [
   {
+    "ContainingType": "comision_api.Controllers.CatalogueController",
+    "Method": "findAll",
+    "RelativePath": "api/catalogue",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "comision_api.Controllers.CatalogueController",
+    "Method": "store",
+    "RelativePath": "api/catalogue",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newCatalogue",
+        "Type": "ComisionQA.Models.Catalogue",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "comision_api.Controllers.CatalogueController",
+    "Method": "IsExist",
+    "RelativePath": "api/catalogue",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "comision_api.Controllers.CatalogueController",
+    "Method": "update",
+    "RelativePath": "api/catalogue/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateCatalogue",
+        "Type": "ComisionQA.Models.Catalogue",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "comision_api.Controllers.RolController",
     "Method": "findAll",
     "RelativePath": "api/rol",

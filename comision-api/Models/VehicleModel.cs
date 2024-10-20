@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ComisionQA.Models
 {
+    [Table("vehicle_models")]
     public class VehicleModel
     {
         public int Id { get; set; }
@@ -10,7 +12,7 @@ namespace ComisionQA.Models
         public string? description { get; set; }
         public float price { get; set; }
         public int stock { get; set; }
-        public bool status { get; set; }
+        public bool? status { get; set; } = true;
         public int brandId { get; set; }
         public Brand Brand { get; set; }
         public DateTime createdAt { get; set; }
