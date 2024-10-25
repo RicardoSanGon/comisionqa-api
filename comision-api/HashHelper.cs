@@ -19,7 +19,7 @@ namespace ComisionQA
             }
         }
 
-        public static bool VerifySha256Hash(string rawData, string hash)
+        public static bool Verify(string rawData, string hash)
         {
             string hashOfInput = Encrypt(rawData);
             StringComparer comparer = StringComparer.OrdinalIgnoreCase;

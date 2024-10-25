@@ -3,9 +3,11 @@
     public class CustomResponse
     {
         private Object data;
+        private string objectName;
         public CustomResponse(Object data)
         {
             this.data = data;
+            this.objectName = data.GetType().Name;
         }
 
         public Object ok()
@@ -39,6 +41,7 @@
         {
             return new
             {
+                message = $"[{this.objectName}] created",
                 status = 201,
                 data = this.data
             };
@@ -57,8 +60,28 @@
         {
             return new
             {
+                message = $"[{this.objectName}] updated",
                 status = 200,
                 data = this.data
+            };
+        }
+
+        public Object deleted()
+        {
+            return new
+            {
+                message = $"[{this.objectName}] deleted",
+                status = 200,
+                data = this.data
+            };
+        }
+
+        internal object? unauthorized()
+        {
+            return new
+            {
+                status = 401,
+                message = this.data
             };
         }
     }

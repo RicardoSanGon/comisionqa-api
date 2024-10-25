@@ -4,6 +4,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL;
 using ComisionQA;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using comision_api;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,9 +15,28 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-builder.Services.AddNpgsql<ComisionQaContext>(connectionString: "Host=localhost;Port=5432;Database=comisionqa;Username=postgres;Password=root;");
+builder.Services.AddDbContextPool<ComisionQaContext>(options =>
+{
+   options.UseNpgsql(builder.Configuration.GetConnectionString("ContextConnection"));
+});
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+   .AddJwtBearer(options =>
+   {
+       options.TokenValidationParameters = new TokenValidationParameters
+       {
+           ValidateIssuer = false,
+           ValidateAudience = false,
+           ValidateLifetime = true,
+           ValidateIssuerSigningKey = true,
+           IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
+       };
+   });
 
 
 var app = builder.Build();
@@ -22,7 +45,6 @@ if (args.Length == 1 && args[0].ToLower() == "seed")
     Console.WriteLine("Seeding database...");
     SeedDatabase();
 }
-
 
 async void SeedDatabase()
 {
@@ -61,6 +83,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

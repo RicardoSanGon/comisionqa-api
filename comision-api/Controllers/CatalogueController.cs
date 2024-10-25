@@ -1,4 +1,5 @@
 ﻿using ComisionQA;
+using ComisionQA.Migrations;
 using ComisionQA.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,19 +18,23 @@ namespace comision_api.Controllers
         {
             this._context = context;
         }
+        
+
 
         public async Task<IActionResult> findAll()
         {
             var catalogues = await _context.Catalogues.Include(c => c.Brands)
                 .ThenInclude(b => b.VehicleModels).ToListAsync();
             return Ok(catalogues);
-        }
+        } 
+
+
         [HttpPost]
         public async Task<IActionResult> store([FromBody] Catalogue newCatalogue)
         {
             _context.Catalogues.Add(newCatalogue);
             await _context.SaveChangesAsync();
-            return Ok(new CustomResponse(newCatalogue).ok());
+            return Ok(new CustomResponse(newCatalogue).created());
         }
         [HttpPut("{id}")]
         public async Task<IActionResult> update([FromBody] Catalogue updateCatalogue, int id)
@@ -41,14 +46,26 @@ namespace comision_api.Controllers
             var catalogue = await _context.Catalogues.FindAsync(id);
             catalogue.name = updateCatalogue.name;
             catalogue.updatedAt = DateTime.UtcNow;
-            _context.SaveChanges();
-            Console.WriteLine(catalogue.updatedAt?.ToString("yyyy-MM-dd HH:mm:ss"));
+            await _context.SaveChangesAsync();
             return Ok(new CustomResponse(catalogue).updated());
         }
-
-        public async Task<bool> IsExist(int id)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> destroy(int id)
+        {
+            if (!await this.IsExist(id))
+            {
+                return NotFound(new CustomResponse("Catalogue not found").notFound());
+            }
+            var catalogue = await _context.Catalogues.FindAsync(id);
+            catalogue.status = !catalogue.status;
+            catalogue.deletedAt = DateTime.UtcNow;
+            await _context.SaveChangesAsync();
+            return Ok(new CustomResponse(catalogue).deleted());
+        }
+        private async Task<bool> IsExist(int id)
         {
             return await _context.Catalogues.AnyAsync(c => c.Id == id);
         }
+
     }
 }

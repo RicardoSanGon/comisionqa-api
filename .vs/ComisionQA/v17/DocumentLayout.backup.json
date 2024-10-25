@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "D:\\ComisionQA\\ComisionQA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\controllers\\cataloguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\controllers\\cataloguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\models\\catalogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\models\\catalogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\hashhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\hashhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\customresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\customresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|d:\\comisionqa\\comisionqa\\comision-api\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5410B06-C7A7-4EC7-84EE-D36F5F1C2321}|comision-api\\comision-api.csproj|solutionrelative:comision-api\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +58,132 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Program.cs",
+              "RelativeDocumentMoniker": "comision-api\\Program.cs",
+              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Program.cs",
+              "RelativeToolTip": "comision-api\\Program.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAuwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T20:20:21.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CustomResponse.cs",
               "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\CustomResponse.cs",
               "RelativeDocumentMoniker": "comision-api\\CustomResponse.cs",
               "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\CustomResponse.cs",
               "RelativeToolTip": "comision-api\\CustomResponse.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwCEAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAawFQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T05:14:46.751Z",
+              "WhenOpened": "2024-10-25T20:00:43.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Catalogue.cs",
-              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Models\\Catalogue.cs",
-              "RelativeDocumentMoniker": "comision-api\\Models\\Catalogue.cs",
-              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Models\\Catalogue.cs",
-              "RelativeToolTip": "comision-api\\Models\\Catalogue.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Models\\User.cs",
+              "RelativeDocumentMoniker": "comision-api\\Models\\User.cs",
+              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Models\\User.cs",
+              "RelativeToolTip": "comision-api\\Models\\User.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T23:11:11.522Z",
+              "WhenOpened": "2024-10-25T19:58:39.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RolController.cs",
-              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Controllers\\RolController.cs",
-              "RelativeDocumentMoniker": "comision-api\\Controllers\\RolController.cs",
-              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Controllers\\RolController.cs",
-              "RelativeToolTip": "comision-api\\Controllers\\RolController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBgAAAAZAAAAAAAAAA==",
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Dto\\LoginDto.cs",
+              "RelativeDocumentMoniker": "comision-api\\Dto\\LoginDto.cs",
+              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Dto\\LoginDto.cs",
+              "RelativeToolTip": "comision-api\\Dto\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T23:10:44.939Z",
+              "WhenOpened": "2024-10-25T19:56:58.03Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CatalogueController.cs",
-              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Controllers\\CatalogueController.cs",
-              "RelativeDocumentMoniker": "comision-api\\Controllers\\CatalogueController.cs",
-              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Controllers\\CatalogueController.cs*",
-              "RelativeToolTip": "comision-api\\Controllers\\CatalogueController.cs*",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAcwCwAAAA8AAAAAAAAAA==",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "comision-api\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "comision-api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAUwFIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T23:09:56.464Z",
+              "WhenOpened": "2024-10-25T19:25:52.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Models\\Profile.cs",
+              "RelativeDocumentMoniker": "comision-api\\Models\\Profile.cs",
+              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Models\\Profile.cs",
+              "RelativeToolTip": "comision-api\\Models\\Profile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T19:19:48.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Dto\\UserDto.cs",
+              "RelativeDocumentMoniker": "comision-api\\Dto\\UserDto.cs",
+              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Dto\\UserDto.cs",
+              "RelativeToolTip": "comision-api\\Dto\\UserDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T19:19:12.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HashHelper.cs",
+              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\HashHelper.cs",
+              "RelativeDocumentMoniker": "comision-api\\HashHelper.cs",
+              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\HashHelper.cs",
+              "RelativeToolTip": "comision-api\\HashHelper.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T00:23:18.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "comision-api\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "comision-api\\Controllers\\UserController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAUwB4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T00:07:49.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BrandController.cs",
+              "DocumentMoniker": "D:\\ComisionQA\\ComisionQA\\comision-api\\Controllers\\BrandController.cs",
+              "RelativeDocumentMoniker": "comision-api\\Controllers\\BrandController.cs",
+              "ToolTip": "D:\\ComisionQA\\ComisionQA\\comision-api\\Controllers\\BrandController.cs",
+              "RelativeToolTip": "comision-api\\Controllers\\BrandController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCAAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T15:52:31.245Z",
               "EditorCaption": ""
             }
           ]

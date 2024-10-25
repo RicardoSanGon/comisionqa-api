@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Security.AccessControl;
 
 namespace ComisionQA.Models
 {
@@ -30,8 +32,10 @@ namespace ComisionQA.Models
                 .HasDefaultValue(true);
             modelBuilder.Entity<Catalogue>()
                 .HasMany<Brand>(c => c.Brands)
-                .WithOne(b => b.Catalogue)
+            .WithOne(b => b.Catalogue)
                 .HasForeignKey(b => b.catalogueId);
         }
+
+       
     }
 }

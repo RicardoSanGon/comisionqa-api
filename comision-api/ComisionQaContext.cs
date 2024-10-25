@@ -1,16 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using ComisionQA.Models;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace ComisionQA
 {
     public class ComisionQaContext : DbContext
     {
+       
         public ComisionQaContext(DbContextOptions<ComisionQaContext> options)
             : base(options)
         {
             
         }
+
+       
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,7 +38,7 @@ namespace ComisionQA
         public DbSet<ComisionQA.Models.Profile> Profiles { get; set; }
         public DbSet<ComisionQA.Models.OrderDetail> OrderDetails { get; set; }
         public DbSet<ComisionQA.Models.SaleHistory> SaleHistories { get; set; }
-        public DbSet<ComisionQA.Models.Order> orders { get; set; }
+        public DbSet<ComisionQA.Models.Order> Orders { get; set; }
         public DbSet<ComisionQA.Models.Brand> Brands{ get; set; }
         public DbSet<ComisionQA.Models.Catalogue> Catalogues { get; set; }
     }

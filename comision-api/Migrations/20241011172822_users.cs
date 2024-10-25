@@ -31,6 +31,7 @@ namespace ComisionQA.Migrations
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                     table.ForeignKey("FK_Users_Rols_rol_id", x => x.rolId, "roles", "Id");
+                    table.UniqueConstraint("AK_Users_email", x => x.email);
                 });
         }
 
