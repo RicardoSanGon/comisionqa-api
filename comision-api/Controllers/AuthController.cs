@@ -1,15 +1,15 @@
 ﻿using comision_api.Dto;
+using comision_api.Services;
 using ComisionQA;
 using ComisionQA.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace comision_api.Controllers
 {
@@ -41,8 +41,16 @@ namespace comision_api.Controllers
                     phone = user.phone,
                     address = user.address,
                     username = user.firstname + '.' + user.paternal
-                }
+                },
+                verificationToken = Guid.NewGuid().ToString()
             };
+            var email = new EmailService(_configuration);
+            var url = "http://localhost:5002/api/auth/verify/" + newUser.verificationToken;
+            
+            if(!await email.VerifyEmail(newUser.profile.firstname, newUser.email, url))
+            {
+                return Problem(statusCode: StatusCodes.Status500InternalServerError, detail: "Something went wrong");
+            }
             _context.Users.Add(newUser);
             await _context.SaveChangesAsync();
             return Ok(new CustomResponse(newUser).created());
@@ -55,6 +63,7 @@ namespace comision_api.Controllers
             if (loginUser == null) return BadRequest();
             var user = await _context.Users.FirstOrDefaultAsync(u => u.email == loginUser.email);
             if (user == null) return NotFound(new CustomResponse("User not found").notFound());
+            if(user.verified == false) return Unauthorized(new CustomResponse("User not verified").unauthorized());
             if (!HashHelper.Verify(loginUser.password, user.password)) return Unauthorized(new CustomResponse("Invalid credentials").unauthorized());
             var authClaims = new List<Claim>
                 {
@@ -70,8 +79,7 @@ namespace comision_api.Controllers
                 );
             return Ok(new
             {
-                token = new JwtSecurityTokenHandler().WriteToken(token),
-                expiration = token.ValidTo
+                token = new JwtSecurityTokenHandler().WriteToken(token)
             });
         }
         [Route("profile")]
@@ -81,6 +89,23 @@ namespace comision_api.Controllers
             var userId = User.FindFirstValue("id");
             var user = await _context.Users.Include(u => u.profile).FirstOrDefaultAsync(u => u.Id == int.Parse(userId));
             return Ok(user);
+        }
+
+        [HttpGet]
+        [Route("verify/{token}")]
+        public async Task<IActionResult> verifyEmail(string token)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.verificationToken == token);
+            if (user == null) return NotFound(new CustomResponse("User not found").notFound());
+            user.verified = true;
+            user.verificationToken = null;
+            await _context.SaveChangesAsync();
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "src", "views", "CuentaActivada.html");
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound("El archivo de la vista no se encuentra.");
+            }
+            return PhysicalFile(filePath, "text/html");
         }
     }
 }

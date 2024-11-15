@@ -9,7 +9,7 @@ namespace comision_api.Dto
         [StringLength(30)]
         public string email { get; set; }
         [Required]
-        [StringLength(30, MinimumLength = 8)]
+        [StringLength(30, MinimumLength = 8, ErrorMessage ="La contraseña tiene que ser mayor de 8 caracteres")]
         public string password { get; set; }
         [Required]
         [StringLength(30, MinimumLength = 8)]

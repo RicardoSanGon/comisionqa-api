@@ -33,6 +33,7 @@ namespace ComisionQA.Migrations
                 {
                     table.PrimaryKey("PK_Profiles", x => x.Id);
                     table.ForeignKey("FK_Profiles_Users_user_id", x => x.userId, "users", "Id");
+                    table.UniqueConstraint("UQ_Profiles_username", x => x.phone);
                 });
         }
 

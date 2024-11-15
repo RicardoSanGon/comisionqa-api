@@ -28,6 +28,8 @@ namespace comision_api.Dto
         [DataType(DataType.PhoneNumber)]
         [StringLength(10, MinimumLength = 10)]
         public string? phone { get; set; }
+        [StringLength(50)]
         public string? address { get; set; }
-    }
+
+}
 }

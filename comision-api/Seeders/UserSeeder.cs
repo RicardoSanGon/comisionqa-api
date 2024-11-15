@@ -17,9 +17,9 @@ namespace ComisionQA.Seeders
                 _context.Database.EnsureCreated();
                 
                 var users = new User[] {
-                new User(){ rolId=1, email="admin@comisionqa.com", password=HashHelper.Encrypt("admin123") },
-                new User(){ rolId=2, email="cliente@comisionqa.com", password=HashHelper.Encrypt("cliente123") },
-                new User(){ rolId=3, email="invitado@comisionqa.com", password=HashHelper.Encrypt("invitado123") }
+                new User(){ rolId=1, email="admin@comisionqa.com", password=HashHelper.Encrypt("admin123"), verified=true },
+                new User(){ rolId=2, email="cliente@comisionqa.com", password=HashHelper.Encrypt("cliente123"), verified=true },
+                new User(){ rolId=3, email="invitado@comisionqa.com", password=HashHelper.Encrypt("invitado123"), verified=true }
                 };
                 foreach (var user in users)
                 {

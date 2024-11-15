@@ -42,6 +42,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "comision_api.Controllers.AuthController",
+    "Method": "verifyEmail",
+    "RelativePath": "api/auth/verify/{token}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "comision_api.Controllers.BrandController",
     "Method": "GetBrands",
     "RelativePath": "api/brand",

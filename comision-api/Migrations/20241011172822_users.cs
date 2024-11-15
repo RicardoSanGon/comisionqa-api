@@ -23,6 +23,8 @@ namespace ComisionQA.Migrations
                     code = table.Column<string>(type: "text", nullable: true, defaultValue:null),
                     status = table.Column<bool>(type: "boolean", nullable: false, defaultValue:true),
                     rolId = table.Column<int>(type: "integer", nullable: false),
+                    verified = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
+                    verificationToken = table.Column<string>(type: "text", nullable: true),
                     createdAt = table.Column<DateTime>(type: "timestamp", nullable: true, defaultValueSql: "NOW()"),
                     updatedAt = table.Column<DateTime>(type: "timestamp", nullable: true, defaultValueSql: "NOW()"),
                     deletedAt = table.Column<DateTime>(type: "timestamp", nullable: true)

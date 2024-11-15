@@ -27,7 +27,8 @@ namespace comision_api.Controllers
                 u.status,
                 u.rolId,
                 u.Rol,
-                u.profile
+                u.profile,
+                u.verified
             }).ToListAsync();
             return Ok(users);
         }

@@ -18,6 +18,9 @@ namespace ComisionQA.Models
         public string password { get; set; }
         public string? code { get; set; }
         public bool? status { get; set; }
+        public bool? verified { get; set; }
+        [JsonIgnore]
+        public string? verificationToken { get; set; }
         public int? rolId { get; set; } = 3;
         public Rol? Rol { get; set; }
         public DateTime createdAt { get; set; }
@@ -47,6 +50,9 @@ namespace ComisionQA.Models
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.email)
                 .IsUnique();
+            modelBuilder.Entity<User>()
+                .Property(u => u.verified)
+                .HasDefaultValue(false);
         }
 
     }
